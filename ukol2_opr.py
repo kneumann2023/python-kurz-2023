@@ -33,9 +33,8 @@ else:
         pocet_skladem += kusy
         if kod == soucastka and mnozstvi > kusy:  
             print("Lze prodat pouze omezené množství kusů.")
-            pocet_skladem = sklad.pop(kod)                          # pomoc
-            sklad = pocet_skladem                                   # nejde odstranit polozka ze slovniku
-            print(f"Skladem je pouze {sklad} kusů.")                # :/
+            pocet_skladem = sklad.pop(kod)                          
+            print(f"Skladem je pouze {sklad} kusů.")                
         if kod == soucastka and mnozstvi < kusy:                  
             print("Skladem je dostatečné množství kusů.")
             pocet_skladem = (sklad[kod] - mnozstvi)
